@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>trajectory_visualization</name>
+  <version>0.0.0</version>
+  <description>The trajectory_visualization package</description>
+
+  <maintainer email="hello@saleh.tld">Your Name</maintainer>
+  <license>BSD</license>
+
+  <!-- Build tool dependency -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Dependencies required for building/using custom srv -->
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+
+  <!-- Other dependencies -->
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>tf2</build_depend>
+  <build_depend>tf2_ros</build_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>tf2</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+</package>
