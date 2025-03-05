@@ -52,7 +52,7 @@ Open RViz:
    ```bash
    rosrun rviz rviz
 
-Add a MarkerArray display and set the Marker Topic to /saved_trajectory_markers.
+9. Add a MarkerArray display and set the Marker Topic to /saved_trajectory_markers.
 
 Set the Fixed Frame to odom (or the frame used in your code).
 
