@@ -18,34 +18,40 @@ This ROS package provides tools for visualizing and storing the trajectory of an
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/trajectory-visualization-ros.git
+   git clone https://github.com/mohamedsaleh77/trajectory-visualization-ros.git
    cd trajectory-visualization-ros
    
 2. Build the ROS package:
 
+   ```bash
+   cd trajectory_visualization
+   catkin_make
 
-cd trajectory_visualization
-catkin_make
-
-Source the workspace:
-3. source devel/setup.bash
+3. Source the workspace:
+   ```bash
+   source devel/setup.bash
 
 ## Usage
-Run the Trajectory Publisher and Saver Node:
+4. Run the Trajectory Publisher and Saver Node:
+   ```bash 
+   rosrun trajectory_visualization trajectory_publisher_saver
+   
+5. Save the Trajectory:
+   
+6. Call the service to save the trajectory:
+   ```bash
+   rosservice call /save_trajectory "{file_name: '/path/to/trajectory.json', duration: 10}"
 
-rosrun trajectory_visualization trajectory_publisher_saver
-Save the Trajectory:
-Call the service to save the trajectory:
+7. Run the Trajectory Reader and Publisher Node:
+   ```bash
+   rosrun trajectory_visualization trajectory_reader_publisher /path/to/trajectory.json
 
-rosservice call /save_trajectory "{file_name: '/path/to/trajectory.json', duration: 10}"
-Run the Trajectory Reader and Publisher Node:
-
-rosrun trajectory_visualization trajectory_reader_publisher /path/to/trajectory.json
-Visualize in RViz:
+8. Visualize in RViz:
 
 Open RViz:
+   ```bash
+   rosrun rviz rviz
 
-rosrun rviz rviz
 Add a MarkerArray display and set the Marker Topic to /saved_trajectory_markers.
 
 Set the Fixed Frame to odom (or the frame used in your code).
